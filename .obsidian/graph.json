@@ -124,8 +124,5 @@
   "linkDistance": 100,
   "scale": 0.45050811767578125,
   "close": true,
-  "localBacklinks": true,
-  "localForelinks": true,
-  "localInterlinks": true,
-  "localJumps": 2
+  "showOrphans": true
 }
