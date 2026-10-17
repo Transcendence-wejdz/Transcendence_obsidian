@@ -1,0 +1,4 @@
+/* Hide Unity .meta files from the file explorer */
+.nav-file-title[data-path$=".meta"] {
+  display: none;
+}

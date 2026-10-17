@@ -4,5 +4,8 @@
   "attachmentFolderPath": "./",
   "openBehavior": "",
   "alwaysUpdateLinks": true,
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "userIgnoreFilters": [
+    "/\\.meta$/"
+  ]
 }
