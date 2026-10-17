@@ -1,5 +1,10 @@
 ---
 graph-size: 200
+fichiers:
+  - "[[FriendsManager.cs]]"
+  - "[[FriendsPanelUI.cs]]"
+  - "[[FriendRowUI.cs]]"
+  - "[[InviteToastUI.cs]]"
 ---
 #module #game
 

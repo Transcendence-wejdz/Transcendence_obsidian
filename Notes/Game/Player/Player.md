@@ -1,5 +1,26 @@
 ---
 graph-size: 200
+fichiers:
+  - "[[Player.cs]]"
+  - "[[Player.Movement.cs]]"
+  - "[[Player.Actions.cs]]"
+  - "[[Player.Stats.cs]]"
+  - "[[Player.Customization.cs]]"
+  - "[[Player.Feedback.cs]]"
+  - "[[Player.LevelUp.cs]]"
+  - "[[Player.Mount.cs]]"
+  - "[[Player.PigForm.cs]]"
+  - "[[Player.Shield.cs]]"
+  - "[[ClassKit.cs]]"
+  - "[[ClassKitEditor.cs]]"
+  - "[[AbilityType.cs]]"
+  - "[[LocalPlayer.cs]]"
+  - "[[MouseDirectionIndicator.cs]]"
+  - "[[PlayerCameraRig.cs]]"
+  - "[[PlayerNameTag.cs]]"
+  - "[[PlayerProfileStore.cs]]"
+  - "[[PlayerSpawner.cs]]"
+  - "[[PlayerSpawnPoint.cs]]"
 ---
 #module #game
 

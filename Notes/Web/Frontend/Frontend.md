@@ -1,5 +1,9 @@
 ---
 graph-size: 200
+fichiers:
+  - "[[index.html]]"
+  - "[[script.js]]"
+  - "[[style.css]]"
 ---
 #module #web
 

@@ -1,5 +1,12 @@
 ---
 graph-size: 200
+fichiers:
+  - "[[PauseManager.cs]]"
+  - "[[GameSettings.cs]]"
+  - "[[KeybindOverrides.cs]]"
+  - "[[LoadingScreenManager.cs]]"
+  - "[[SortingLayer_Auto.cs]]"
+  - "[[DeathProtectionZone.cs]]"
 ---
 #module #game
 

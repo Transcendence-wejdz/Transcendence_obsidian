@@ -1,5 +1,21 @@
 ---
 graph-size: 200
+fichiers:
+  - "[[Enemy.cs]]"
+  - "[[EnemyAI.cs]]"
+  - "[[EnemyActions.cs]]"
+  - "[[EnemyStats.cs]]"
+  - "[[EnemyKit.cs]]"
+  - "[[EnemyKitEditor.cs]]"
+  - "[[EnemyFlowFieldManager.cs]]"
+  - "[[EnemyFlowField.cs]]"
+  - "[[ObstacleQuery.cs]]"
+  - "[[AttackTelegraph.cs]]"
+  - "[[RangedAttackVisual.cs]]"
+  - "[[WaveSpawner.cs]]"
+  - "[[XPManager.cs]]"
+  - "[[LevelUpManager.cs]]"
+  - "[[GameOverCheck.cs]]"
 ---
 #module #game
 

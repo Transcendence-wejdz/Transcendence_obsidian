@@ -1,5 +1,15 @@
 ---
 graph-size: 200
+fichiers:
+  - "[[NetworkBootstrap.cs]]"
+  - "[[ServicesAuth.cs]]"
+  - "[[GameModeLoader.cs]]"
+  - "[[ModeReadyCheck.cs]]"
+  - "[[OfflinePlayerGate.cs]]"
+  - "[[PhantomPlayerCleanup.cs]]"
+  - "[[SessionDisconnectHandler.cs]]"
+  - "[[NetworkBehaviourExtensions.cs]]"
+  - "[[TestClientProbe.cs]]"
 ---
 #module #game
 

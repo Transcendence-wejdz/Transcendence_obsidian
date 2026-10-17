@@ -1,5 +1,8 @@
 ---
 graph-size: 200
+fichiers:
+  - "[[server.js]]"
+  - "[[Dockerfile]]"
 ---
 #module #web
 

@@ -1,5 +1,13 @@
 ---
 graph-size: 200
+fichiers:
+  - "[[ProceduralMapGenerator.cs]]"
+  - "[[ProceduralMapGenerator.Noise.cs]]"
+  - "[[ProceduralMapGenerator.Decor.cs]]"
+  - "[[ProceduralMapGeneratorEditor.cs]]"
+  - "[[DecorFlipbook.cs]]"
+  - "[[SiblingWallRuleTile.cs]]"
+  - "[[SortingLayer_AutoEditor.cs]]"
 ---
 #module #game
 

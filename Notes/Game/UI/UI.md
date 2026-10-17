@@ -1,5 +1,29 @@
 ---
 graph-size: 200
+fichiers:
+  - "[[StatBarUI.cs]]"
+  - "[[XPBarUI.cs]]"
+  - "[[CooldownIcon.cs]]"
+  - "[[PerfStatsHUD.cs]]"
+  - "[[PlayerNameUI.cs]]"
+  - "[[CoopHUD.cs]]"
+  - "[[AllyIndicatorManager.cs]]"
+  - "[[ScreenEdgeFlash.cs]]"
+  - "[[MenuPanel.cs]]"
+  - "[[CharacterCustomizationMenu.cs]]"
+  - "[[SettingsPanelUI.cs]]"
+  - "[[SettingsTabGroup.cs]]"
+  - "[[KeybindsPanelUI.cs]]"
+  - "[[GameOverUI.cs]]"
+  - "[[LevelUpUI.cs]]"
+  - "[[LobbyRosterUI.cs]]"
+  - "[[LobbyRosterEntryUI.cs]]"
+  - "[[ReadyCheckUI.cs]]"
+  - "[[ReadyCheckEntryUI.cs]]"
+  - "[[BackgroundColorUI.cs]]"
+  - "[[AvatarUI.cs]]"
+  - "[[CursorManager.cs]]"
+  - "[[DebugLogger.cs]]"
 ---
 #module #game
 

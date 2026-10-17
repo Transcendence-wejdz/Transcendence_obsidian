@@ -1,5 +1,18 @@
 ---
 graph-size: 200
+fichiers:
+  - "[[IDamageable.cs]]"
+  - "[[IHealthStats.cs]]"
+  - "[[IAttackFX.cs]]"
+  - "[[SlashAttackFX.cs]]"
+  - "[[LayeredAttackFX.cs]]"
+  - "[[ShieldHoldFX.cs]]"
+  - "[[ArrowProjectile.cs]]"
+  - "[[WorldHealthBar.cs]]"
+  - "[[DamageNumberSpawner.cs]]"
+  - "[[DamageNumberPopup.cs]]"
+  - "[[SpriteHitFlash.cs]]"
+  - "[[DummyStats.cs]]"
 ---
 #module #game
 

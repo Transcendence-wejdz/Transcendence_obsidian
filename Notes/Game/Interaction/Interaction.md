@@ -1,5 +1,9 @@
 ---
 graph-size: 200
+fichiers:
+  - "[[InteractableZone.cs]]"
+  - "[[InteractionManager.cs]]"
+  - "[[InteractPromptUI.cs]]"
 ---
 #module #game
 
