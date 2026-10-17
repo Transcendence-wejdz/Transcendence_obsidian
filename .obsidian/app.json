@@ -3,5 +3,6 @@
   "newFileFolderPath": "Notes",
   "attachmentFolderPath": "./",
   "openBehavior": "",
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true
 }

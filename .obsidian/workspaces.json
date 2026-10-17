@@ -136,84 +136,84 @@
                           }
                         },
                         {
-                          "query": "path:Notes/Game/Enemies",
+                          "query": "path:Notes/Game/Enemies OR path:UnityProject/Assets/Scripts/Enemies/",
                           "color": {
                             "a": 1,
                             "rgb": 12574782
                           }
                         },
                         {
-                          "query": "path:Notes/Game/Combat",
+                          "query": "path:Notes/Game/Combat OR path:UnityProject/Assets/Scripts/Combat/",
                           "color": {
                             "a": 1,
                             "rgb": 8380478
                           }
                         },
                         {
-                          "query": "path:Notes/Game/Core",
+                          "query": "path:Notes/Game/Core OR path:UnityProject/Assets/Scripts/Core/",
                           "color": {
                             "a": 1,
                             "rgb": 4120703
                           }
                         },
                         {
-                          "query": "path:Notes/Game/Friends",
+                          "query": "path:Notes/Game/Friends OR path:UnityProject/Assets/Scripts/Friends/",
                           "color": {
                             "a": 1,
                             "rgb": 14696127
                           }
                         },
                         {
-                          "query": "path:Notes/Game/Interaction",
+                          "query": "path:Notes/Game/Interaction OR path:UnityProject/Assets/Scripts/Interaction/",
                           "color": {
                             "a": 1,
                             "rgb": 4079328
                           }
                         },
                         {
-                          "query": "path:Notes/Game/Networking",
+                          "query": "path:Notes/Game/Networking OR path:UnityProject/Assets/Scripts/Networking/",
                           "color": {
                             "a": 1,
                             "rgb": 4120638
                           }
                         },
                         {
-                          "query": "path:Notes/Game/Player",
+                          "query": "path:Notes/Game/Player OR path:UnityProject/Assets/Scripts/Player/",
                           "color": {
                             "a": 1,
                             "rgb": 14695998
                           }
                         },
                         {
-                          "query": "path:Notes/Game/Terrain",
+                          "query": "path:Notes/Game/Terrain OR path:UnityProject/Assets/Scripts/Terrain/",
                           "color": {
                             "a": 1,
                             "rgb": 4112352
                           }
                         },
                         {
-                          "query": "path:Notes/Game/UI",
+                          "query": "path:Notes/Game/UI OR path:UnityProject/Assets/Scripts/UI/",
                           "color": {
                             "a": 1,
                             "rgb": 14729022
                           }
                         },
                         {
-                          "query": "path:Notes/Web/Server",
+                          "query": "path:Notes/Web/Server OR path:web/server.js OR path:web/Dockerfile",
                           "color": {
                             "a": 1,
                             "rgb": 8339168
                           }
                         },
                         {
-                          "query": "path:Notes/Web/Frontend",
+                          "query": "path:Notes/Web/Frontend OR path:web/public/",
                           "color": {
                             "a": 1,
                             "rgb": 4095968
                           }
                         },
                         {
-                          "query": "path:Notes/Web/Infra",
+                          "query": "path:Notes/Web/Infra OR path:web/compose.yaml OR path:web/nginx/",
                           "color": {
                             "a": 1,
                             "rgb": 14696063

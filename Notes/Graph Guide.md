@@ -38,7 +38,7 @@ Les 15 teintes sont réparties sur une roue chromatique (écart égal entre chaq
 
 Un fichier ajouté depuis une note atterrit **dans le même dossier que cette note** (réglage "Default location for attachments" = dossier courant), et hérite donc automatiquement de la couleur de ce dossier.
 
-ℹ️ Les liens vers les fichiers du projet (`.cs`, `web/`…) sont hors du vault : ce sont des liens du plugin **External File Embed and Link** (`<a href="#vault://../chemin" class="LinkRelativeTo">`), ouverts avec l'application par défaut du système. Pour qu'ils apparaissent quand même dans le Graph, chaque note les liste aussi dans sa propriété `fichiers:` (`"[[Player.cs]]"`…) : ce sont des nœuds gris (liens non résolus, non colorables) — ne pas cliquer dessus dans le Graph, ça créerait une note vide.
+ℹ️ Les liens vers les fichiers du projet (`.cs`, `web/`…) sont hors du vault : ce sont des liens du plugin **External File Embed and Link** (`<a href="#vault://../chemin" class="LinkRelativeTo">`), ouverts avec l'application par défaut du système. Pour qu'ils apparaissent dans le Graph, chaque note les liste aussi dans sa propriété `fichiers:` (`"[[Player.cs]]"`…). Ils résolvent vers de vrais fichiers grâce aux symlinks `UnityProject/Assets/Scripts` et `web` à la racine du vault (+ "Detect all file extensions" activé) : cliquer un nœud ouvre le fichier dans l'app par défaut, et il prend la couleur du module de son dossier.
 
 ## Réglages du layout
 

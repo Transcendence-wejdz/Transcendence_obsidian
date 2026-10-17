@@ -1,9 +1,10 @@
 ---
 graph-size: 200
 fichiers:
-  - "[[index.html]]"
+  - "[[web/public/index.html|index.html]]"
   - "[[script.js]]"
-  - "[[style.css]]"
+  - "[[web/public/style.css|style.css]]"
+  - "[[SortingLayer_Auto.cs]]"
 ---
 #module #web
 
