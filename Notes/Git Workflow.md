@@ -114,12 +114,7 @@ Merge avec **Create a merge commit** (jamais squash ici). `git log --first-paren
   cd Transcendence_obsidian
   git add Notes/... && git commit -m "docs(<module>): ..." && git push
   ```
-- Puis, dans la PR du code concerné, mettre à jour le pointeur :
-  ```sh
-  cd .. && git add Transcendence_obsidian
-  git commit -m "chore(vault): bump submodule"
-  ```
-- `make setup` met le vault sur le dernier `main`.
+- Pas de PR, et **jamais de commit ni de PR dans le repo principal juste pour mettre à jour le pointeur du submodule** : `make setup` (et `make up`) met toujours le vault sur le dernier `main`. Le pointeur affiché comme modifié (`m Transcendence_obsidian`) dans `git status` est normal, on l'ignore.
 
 ## Archiver une branche
 
