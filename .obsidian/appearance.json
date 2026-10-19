@@ -1,5 +1,6 @@
 {
   "enabledCssSnippets": [
-    "hide-unity-meta"
+    "hide-unity-meta",
+    "kanban-lanes"
   ]
 }

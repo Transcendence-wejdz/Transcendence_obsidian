@@ -1,0 +1,21 @@
+/* Todo board lane colors, by column order: To do, Optional, In progress, Done */
+.kanban-plugin__lane-wrapper:nth-child(1) .kanban-plugin__lane {
+  --lane-color: 59, 130, 246;
+}
+.kanban-plugin__lane-wrapper:nth-child(2) .kanban-plugin__lane {
+  --lane-color: 148, 163, 184;
+}
+.kanban-plugin__lane-wrapper:nth-child(3) .kanban-plugin__lane {
+  --lane-color: 245, 158, 11;
+}
+.kanban-plugin__lane-wrapper:nth-child(4) .kanban-plugin__lane {
+  --lane-color: 34, 197, 94;
+}
+.kanban-plugin__lane-wrapper .kanban-plugin__lane {
+  background: rgba(var(--lane-color, 128, 128, 128), 0.08);
+  border-top: 4px solid rgba(var(--lane-color, 128, 128, 128), 0.9);
+}
+.kanban-plugin__lane-wrapper .kanban-plugin__lane-title-text {
+  color: rgb(var(--lane-color, 128, 128, 128));
+  font-weight: 700;
+}

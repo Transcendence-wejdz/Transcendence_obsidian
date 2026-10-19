@@ -7,14 +7,15 @@ Point d'entrée du vault. Ce vault vit dans le sous-module `Transcendence_obsidi
 
 ## Zones du projet
 
-- [[Game Overview]] — jeu Unity (`UnityProject/`)
-- [[Web Overview]] — webapp (`web/`)
-- [[Todo]] — liste de tâches de l'équipe
+- [[Game Overview]] : jeu Unity (`UnityProject/`)
+- [[Web Overview]] : webapp (`web/`)
+- [[Todo]] : liste de tâches de l'équipe (tableau Kanban)
+- [[Git Workflow]] : marche à suivre GitHub (branches, commits, PR, squash, release)
 
 ## Références
 
-- <a href="#vault://../CLAUDE.md" class="LinkRelativeTo">CLAUDE.md</a> — instructions projet pour Claude Code (archi, conventions, workflow)
-- <a href="#vault://../README.md" class="LinkRelativeTo">README.md</a> — readme du repo
+- <a href="#vault://../CLAUDE.md" class="LinkRelativeTo">CLAUDE.md</a> : instructions projet pour Claude Code (archi, conventions, workflow)
+- <a href="#vault://../README.md" class="LinkRelativeTo">README.md</a> : readme du repo
 
 ## Comment lire ce vault
 
