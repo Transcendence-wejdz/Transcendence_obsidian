@@ -7,6 +7,25 @@ Lien retour : [[Home]]. Tâches de l'équipe : [[Todo]].
 
 Marche à suivre pour travailler sur le repo `ft_transcendence` (GitHub org **Transcendence-wejdz**). Le résumé officiel est dans la section *Project Management* du `README.md`.
 
+## Première configuration (à faire une fois)
+
+GitHub relie un commit à un compte **uniquement par l'email de l'auteur**. Sans email configuré, git en fabrique un avec le nom du poste (ex. `erbuffet@z3r6p1.42lyon.fr`) : il change à chaque PC de l'école et n'est relié à aucun compte, donc **tes commits n'apparaissent pas dans tes contributions GitHub** (ni dans la page Contributors du repo).
+
+Chacun lance une seule fois, avec **sa propre** adresse (le home 42 suit l'utilisateur d'un poste à l'autre, à refaire seulement si le home est réinitialisé, et une fois sur un PC perso) :
+
+| Membre | Commande |
+|---|---|
+| zsonie (SaruM4N3) | rien à faire : `zakobajo@gmail.com` est déjà vérifié sur le compte |
+| erbuffet (Nikad0) | `git config --global user.email "189444663+Nikad0@users.noreply.github.com"` |
+| jureix-c (E-Berry) | `git config --global user.email "18516560+E-Berry@users.noreply.github.com"` |
+| dabuchhe | `git config --global user.email "178816760+dabuchhe@users.noreply.github.com"` |
+| willda-s | `git config --global user.email "188464956+willda-s@users.noreply.github.com"` |
+
+- Ne jamais mettre l'adresse de quelqu'un d'autre : tes commits seraient attribués à cette personne.
+- Le nom affiché : `git config --global user.name "Prénom Nom"`.
+- Vérifier depuis le repo : `git config user.email` doit afficher ton adresse. Si ce n'est pas le cas, un email est défini localement dans le repo : relancer la commande sans `--global`.
+- Alternative au noreply : n'importe quel email **vérifié** sur ton compte (GitHub → Settings → Emails). Le noreply évite d'exposer ton vrai email dans l'historique public.
+
 ## Les branches
 
 ```
