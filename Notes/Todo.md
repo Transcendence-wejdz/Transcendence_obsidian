@@ -41,7 +41,6 @@ kanban-plugin: board
 
 ## En cours
 
-- [ ] **Release develop → main** : PR #22, à relire puis merge commit #ci
 
 
 ## Fait
