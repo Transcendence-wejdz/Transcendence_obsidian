@@ -11,7 +11,7 @@ Seul le **build WebGL exporté** de ce projet est destiné à atterrir dans `web
 
 - `Lobby.unity` — scène d'entrée (build index 0), pas de scène "main menu" séparée
 - `Coop.unity` — mode co-op
-- `Test/GameplayTest.unity`, `Test/MapGenTest.unity` — scènes de test, hors flow livré
+- `Test/GameplayTest.unity` : scène de test, hors flow livré
 
 ## Modules de scripts (`UnityProject/Assets/Scripts/`)
 
