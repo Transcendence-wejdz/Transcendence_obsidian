@@ -29,7 +29,7 @@ Tout ce qui concerne le joueur contrôlable. `Player.cs` est le hub : une classe
 ## Scripts
 
 - <a href="#vault://../UnityProject/Assets/Scripts/Player/Player.cs" class="LinkRelativeTo">Player.cs</a> — hub, état partagé entre les fichiers partiels ci-dessous
-- <a href="#vault://../UnityProject/Assets/Scripts/Player/Player.Movement.cs" class="LinkRelativeTo">Player.Movement.cs</a> — input (New Input System), déplacement, flip sprite, orientation souris
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Player.Movement.cs" class="LinkRelativeTo">Player.Movement.cs</a> : input (New Input System), déplacement, flip sprite, orientation souris ou stick droit (action `Aim`) en mode manette
 - <a href="#vault://../UnityProject/Assets/Scripts/Player/Player.Actions.cs" class="LinkRelativeTo">Player.Actions.cs</a> — Attack/Special/Ultimate pilotés par [[ClassKit]]
 - <a href="#vault://../UnityProject/Assets/Scripts/Player/Player.Stats.cs" class="LinkRelativeTo">Player.Stats.cs</a> — vie/mana, implémente `IDamageable`/`IHealthStats` (voir [[Combat]])
 - <a href="#vault://../UnityProject/Assets/Scripts/Player/Player.Customization.cs" class="LinkRelativeTo">Player.Customization.cs</a> — classe/couleur/nom

@@ -23,6 +23,8 @@ fichiers:
   - "[[BackgroundColorUI.cs]]"
   - "[[AvatarUI.cs]]"
   - "[[CursorManager.cs]]"
+  - "[[GamepadUINavigator.cs]]"
+  - "[[GamepadIcons.cs]]"
   - "[[DebugLogger.cs]]"
 ---
 #module #game
@@ -44,8 +46,8 @@ Tous les scripts d'interface. Pattern dominant : les composants gameplay ([[Play
 
 - <a href="#vault://../UnityProject/Assets/Scripts/UI/MenuPanel.cs" class="LinkRelativeTo">MenuPanel.cs</a> — composant générique d'ouverture/fermeture animée (scale+alpha via `CanvasGroup`, unscaled time), base des 4 menus PNJ du Lobby (voir [[Interaction]])
 - <a href="#vault://../UnityProject/Assets/Scripts/UI/CharacterCustomizationMenu.cs" class="LinkRelativeTo">CharacterCustomizationMenu.cs</a> — choix classe/couleur/nom, lié à `Player.Customization`
-- <a href="#vault://../UnityProject/Assets/Scripts/UI/SettingsPanelUI.cs" class="LinkRelativeTo">SettingsPanelUI.cs</a> / <a href="#vault://../UnityProject/Assets/Scripts/UI/SettingsTabGroup.cs" class="LinkRelativeTo">SettingsTabGroup.cs</a> — onglets Général/Keybinds
-- <a href="#vault://../UnityProject/Assets/Scripts/UI/KeybindsPanelUI.cs" class="LinkRelativeTo">KeybindsPanelUI.cs</a> — rebind touches/manette
+- <a href="#vault://../UnityProject/Assets/Scripts/UI/SettingsPanelUI.cs" class="LinkRelativeTo">SettingsPanelUI.cs</a> / <a href="#vault://../UnityProject/Assets/Scripts/UI/SettingsTabGroup.cs" class="LinkRelativeTo">SettingsTabGroup.cs</a> : onglets General/Keybinds/Graphics, dont le réglage "Stick Deadzone"
+- <a href="#vault://../UnityProject/Assets/Scripts/UI/KeybindsPanelUI.cs" class="LinkRelativeTo">KeybindsPanelUI.cs</a> : rebind touches/manette, icônes manette dans la colonne Gamepad, proposition d'échange (Swap) quand la touche est déjà prise
 - <a href="#vault://../UnityProject/Assets/Scripts/UI/GameOverUI.cs" class="LinkRelativeTo">GameOverUI.cs</a> — écran de défaite (Restart/Lobby)
 - <a href="#vault://../UnityProject/Assets/Scripts/UI/LevelUpUI.cs" class="LinkRelativeTo">LevelUpUI.cs</a> — écran de choix de montée de niveau
 
@@ -54,11 +56,16 @@ Tous les scripts d'interface. Pattern dominant : les composants gameplay ([[Play
 - <a href="#vault://../UnityProject/Assets/Scripts/UI/LobbyRosterUI.cs" class="LinkRelativeTo">LobbyRosterUI.cs</a> / <a href="#vault://../UnityProject/Assets/Scripts/UI/LobbyRosterEntryUI.cs" class="LinkRelativeTo">LobbyRosterEntryUI.cs</a> — liste des joueurs dans le Lobby
 - <a href="#vault://../UnityProject/Assets/Scripts/UI/ReadyCheckUI.cs" class="LinkRelativeTo">ReadyCheckUI.cs</a> / <a href="#vault://../UnityProject/Assets/Scripts/UI/ReadyCheckEntryUI.cs" class="LinkRelativeTo">ReadyCheckEntryUI.cs</a> — ready-check avant lancement de mode
 
+## Manette
+
+- <a href="#vault://../UnityProject/Assets/Scripts/UI/GamepadUINavigator.cs" class="LinkRelativeTo">GamepadUINavigator.cs</a> : créé au lancement ; dans un menu (`PauseManager.IsPaused`), sélectionne le premier bouton du menu au premier plan, le grossit pour le rendre visible, B fait retour ; navigation au stick avec hystérésis (pas de double déplacement en diagonale) ; remplace l'action Navigate PassThrough par une action Value pour que la croix soit fiable
+- <a href="#vault://../UnityProject/Assets/Scripts/UI/GamepadIcons.cs" class="LinkRelativeTo">GamepadIcons.cs</a> : sprites des boutons depuis `Resources/UI/gdb-gamepad-2(all)/`, style Xbox, PlayStation ou Switch selon la manette branchée
+
 ## Divers
 
 - <a href="#vault://../UnityProject/Assets/Scripts/UI/BackgroundColorUI.cs" class="LinkRelativeTo">BackgroundColorUI.cs</a> — icône d'épée qui s'adapte à la couleur de personnage choisie
 - <a href="#vault://../UnityProject/Assets/Scripts/UI/AvatarUI.cs" class="LinkRelativeTo">AvatarUI.cs</a> — portrait avatar
-- <a href="#vault://../UnityProject/Assets/Scripts/UI/CursorManager.cs" class="LinkRelativeTo">CursorManager.cs</a> — curseur logiciel custom (pulse au clic, handoff vers le curseur OS hors fenêtre)
+- <a href="#vault://../UnityProject/Assets/Scripts/UI/CursorManager.cs" class="LinkRelativeTo">CursorManager.cs</a> : curseur logiciel custom (pulse au clic, handoff vers le curseur OS hors fenêtre), caché en mode manette
 - <a href="#vault://../UnityProject/Assets/Scripts/UI/DebugLogger.cs" class="LinkRelativeTo">DebugLogger.cs</a> — overlay de logs debug
 
 ## Connexions
@@ -66,3 +73,4 @@ Tous les scripts d'interface. Pattern dominant : les composants gameplay ([[Play
 - → [[Player]], [[Enemies]] : consomme leurs static events
 - → [[Networking]] : roster/ready-check reflètent l'état de session
 - → [[Interaction]] : les 4 menus PNJ du Lobby sont des `MenuPanel`
+- → [[Core]] : `InputModeTracker` décide du mode manette/souris lu par le navigateur et le curseur
