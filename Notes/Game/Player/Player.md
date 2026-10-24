@@ -11,6 +11,8 @@ fichiers:
   - "[[Player.Mount.cs]]"
   - "[[Player.PigForm.cs]]"
   - "[[Player.Shield.cs]]"
+  - "[[Player.Flip.cs]]"
+  - "[[RandomDustTrail.cs]]"
   - "[[ClassKit.cs]]"
   - "[[ClassKitEditor.cs]]"
   - "[[AbilityType.cs]]"
@@ -24,28 +26,30 @@ fichiers:
 ---
 #module #game
 
-Tout ce qui concerne le joueur contrôlable. `Player.cs` est le hub : une classe `partial` éclatée en plusieurs fichiers par responsabilité (fusion effectuée lors du refactor "Player component merge").
+Tout ce qui concerne le joueur contrôlable. Sous-dossiers : `Character/` (partials de `Player`), `Kits/`, `Progression/` (or, upgrades, sauvegardes), `Visuals/`. `Player.cs` est le hub : une classe `partial` éclatée en plusieurs fichiers par responsabilité (fusion effectuée lors du refactor "Player component merge").
 
 ## Scripts
 
-- <a href="#vault://../UnityProject/Assets/Scripts/Player/Player.cs" class="LinkRelativeTo">Player.cs</a> — hub, état partagé entre les fichiers partiels ci-dessous
-- <a href="#vault://../UnityProject/Assets/Scripts/Player/Player.Movement.cs" class="LinkRelativeTo">Player.Movement.cs</a> : input (New Input System), déplacement, flip sprite, orientation souris ou stick droit (action `Aim`) en mode manette
-- <a href="#vault://../UnityProject/Assets/Scripts/Player/Player.Actions.cs" class="LinkRelativeTo">Player.Actions.cs</a> — Attack/Special/Ultimate pilotés par [[ClassKit]]
-- <a href="#vault://../UnityProject/Assets/Scripts/Player/Player.Stats.cs" class="LinkRelativeTo">Player.Stats.cs</a> — vie/mana, implémente `IDamageable`/`IHealthStats` (voir [[Combat]])
-- <a href="#vault://../UnityProject/Assets/Scripts/Player/Player.Customization.cs" class="LinkRelativeTo">Player.Customization.cs</a> — classe/couleur/nom
-- <a href="#vault://../UnityProject/Assets/Scripts/Player/Player.Feedback.cs" class="LinkRelativeTo">Player.Feedback.cs</a> — retours visuels (hit flash, etc.)
-- <a href="#vault://../UnityProject/Assets/Scripts/Player/Player.LevelUp.cs" class="LinkRelativeTo">Player.LevelUp.cs</a> — réception des choix de level-up
-- <a href="#vault://../UnityProject/Assets/Scripts/Player/Player.Mount.cs" class="LinkRelativeTo">Player.Mount.cs</a> — monter le cochon d'un allié pour le ressusciter
-- <a href="#vault://../UnityProject/Assets/Scripts/Player/Player.PigForm.cs" class="LinkRelativeTo">Player.PigForm.cs</a> — forme "cochon" quand mort (se déplace, ne combat pas)
-- <a href="#vault://../UnityProject/Assets/Scripts/Player/Player.Shield.cs" class="LinkRelativeTo">Player.Shield.cs</a> — ultimate bouclier du Warrior
-- <a href="#vault://../UnityProject/Assets/Scripts/Player/ClassKit.cs" class="LinkRelativeTo">ClassKit.cs</a> — asset de données par classe (stats + FX par capacité)
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Character/Player.cs" class="LinkRelativeTo">Player.cs</a> — hub, état partagé entre les fichiers partiels ci-dessous
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Character/Player.Movement.cs" class="LinkRelativeTo">Player.Movement.cs</a> : input (New Input System), déplacement, flip sprite, orientation souris ou stick droit (action `Aim`) en mode manette
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Character/Player.Actions.cs" class="LinkRelativeTo">Player.Actions.cs</a> — Attack/Special/Ultimate pilotés par [[ClassKit]]
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Character/Player.Stats.cs" class="LinkRelativeTo">Player.Stats.cs</a> — vie/mana, implémente `IDamageable`/`IHealthStats` (voir [[Combat]])
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Character/Player.Customization.cs" class="LinkRelativeTo">Player.Customization.cs</a> — classe/couleur/nom
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Character/Player.Feedback.cs" class="LinkRelativeTo">Player.Feedback.cs</a> — retours visuels (hit flash, etc.)
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Character/Player.LevelUp.cs" class="LinkRelativeTo">Player.LevelUp.cs</a> — réception des choix de level-up
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Character/Player.Mount.cs" class="LinkRelativeTo">Player.Mount.cs</a> — monter le cochon d'un allié pour le ressusciter
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Character/Player.PigForm.cs" class="LinkRelativeTo">Player.PigForm.cs</a> — forme "cochon" quand mort (se déplace, ne combat pas)
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Character/Player.Shield.cs" class="LinkRelativeTo">Player.Shield.cs</a> — ultimate bouclier du Warrior
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Character/Player.Flip.cs" class="LinkRelativeTo">Player.Flip.cs</a> : retournement "papier" du sprite (proxy écrasé sur X) au lieu d'un flipX instantané
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Kits/ClassKit.cs" class="LinkRelativeTo">ClassKit.cs</a> — asset de données par classe (stats + FX par capacité)
 - <a href="#vault://../UnityProject/Assets/Scripts/Player/Editor/ClassKitEditor.cs" class="LinkRelativeTo">Editor/ClassKitEditor.cs</a> — inspecteur custom pour `ClassKit`
-- <a href="#vault://../UnityProject/Assets/Scripts/Player/AbilityType.cs" class="LinkRelativeTo">AbilityType.cs</a> — enum partagé avec `UI/CooldownIcon`
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Kits/AbilityType.cs" class="LinkRelativeTo">AbilityType.cs</a> — enum partagé avec `UI/CooldownIcon`
 - <a href="#vault://../UnityProject/Assets/Scripts/Player/LocalPlayer.cs" class="LinkRelativeTo">LocalPlayer.cs</a> — référence/marqueur du joueur local
-- <a href="#vault://../UnityProject/Assets/Scripts/Player/MouseDirectionIndicator.cs" class="LinkRelativeTo">MouseDirectionIndicator.cs</a> — rune au sol pointant la souris, teintée à la couleur de customisation
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Visuals/MouseDirectionIndicator.cs" class="LinkRelativeTo">MouseDirectionIndicator.cs</a> — rune au sol pointant la souris, teintée à la couleur de customisation
 - <a href="#vault://../UnityProject/Assets/Scripts/Player/PlayerCameraRig.cs" class="LinkRelativeTo">PlayerCameraRig.cs</a> — caméra suiveuse / caméra de preview customisation
-- <a href="#vault://../UnityProject/Assets/Scripts/Player/PlayerNameTag.cs" class="LinkRelativeTo">PlayerNameTag.cs</a> — nametag monde, visible seulement en multi
-- <a href="#vault://../UnityProject/Assets/Scripts/Player/PlayerProfileStore.cs" class="LinkRelativeTo">PlayerProfileStore.cs</a> — sauvegarde locale JSON (classe/couleur/nom)
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Visuals/PlayerNameTag.cs" class="LinkRelativeTo">PlayerNameTag.cs</a> — nametag monde, visible seulement en multi
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Visuals/RandomDustTrail.cs" class="LinkRelativeTo">RandomDustTrail.cs</a> : trace de poussière de marche, une bouffée Dust_01 ou Dust_02 au hasard toutes les `spacing` unités
+- <a href="#vault://../UnityProject/Assets/Scripts/Player/Progression/PlayerProfileStore.cs" class="LinkRelativeTo">PlayerProfileStore.cs</a> — sauvegarde locale JSON (classe/couleur/nom)
 - <a href="#vault://../UnityProject/Assets/Scripts/Player/PlayerSpawner.cs" class="LinkRelativeTo">PlayerSpawner.cs</a> / <a href="#vault://../UnityProject/Assets/Scripts/Player/PlayerSpawnPoint.cs" class="LinkRelativeTo">PlayerSpawnPoint.cs</a> — placement au spawn réseau
 
 ## Connexions
