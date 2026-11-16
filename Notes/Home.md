@@ -11,6 +11,8 @@ Point d'entrée du vault. Ce vault vit dans le sous-module `Transcendence_obsidi
 - [[Web Overview]] : webapp (`web/`)
 - [[Todo]] : liste de tâches de l'équipe (tableau Kanban)
 - [[Git Workflow]] : marche à suivre GitHub (branches, commits, PR, squash, release)
+- [[16-11-2026 Réunion]] : réunion du XX novembre (ordre du jour et compte rendu)
+
 
 ## Références
 
