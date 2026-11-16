@@ -13,13 +13,13 @@ GitHub relie un commit à un compte **uniquement par l'email de l'auteur**. Sans
 
 Chacun lance une seule fois, avec **sa propre** adresse (le home 42 suit l'utilisateur d'un poste à l'autre, à refaire seulement si le home est réinitialisé, et une fois sur un PC perso) :
 
-| Membre | Commande |
-|---|---|
-| zsonie (SaruM4N3) | rien à faire : `zakobajo@gmail.com` est déjà vérifié sur le compte |
-| erbuffet (Nikad0) | `git config --global user.email "189444663+Nikad0@users.noreply.github.com"` |
-| jureix-c (E-Berry) | `git config --global user.email "18516560+E-Berry@users.noreply.github.com"` |
-| dabuchhe | `git config --global user.email "178816760+dabuchhe@users.noreply.github.com"` |
-| willda-s | `git config --global user.email "188464956+willda-s@users.noreply.github.com"` |
+| Membre             | Commande                                                                       |
+| ------------------ | ------------------------------------------------------------------------------ |
+| zsonie (SaruM4N3)  | rien à faire : `zakobajo@gmail.com` est déjà vérifié sur le compte             |
+| erbuffet (Nikad0)  | `git config --global user.email "189444663+Nikad0@users.noreply.github.com"`   |
+| jureix-c (E-Berry) | `git config --global user.email "18516560+E-Berry@users.noreply.github.com"`   |
+| dabuchhe           | `git config --global user.email "178816760+dabuchhe@users.noreply.github.com"` |
+| willda-s           | `git config --global user.email "188464956+willda-s@users.noreply.github.com"` |
 
 - Ne jamais mettre l'adresse de quelqu'un d'autre : tes commits seraient attribués à cette personne.
 - Le nom affiché : `git config --global user.name "Prénom Nom"`.
@@ -54,14 +54,14 @@ Déplace la carte dans **En cours** du [[Todo]] et mets ton login dessus.
 
 Format **Conventional Commits** : `type(scope): résumé court en anglais`
 
-| Type | Quand |
-|---|---|
-| `feat` | nouvelle fonctionnalité |
-| `fix` | correction de bug |
+| Type       | Quand                                       |
+| ---------- | ------------------------------------------- |
+| `feat`     | nouvelle fonctionnalité                     |
+| `fix`      | correction de bug                           |
 | `refactor` | réorganisation sans changer le comportement |
-| `chore` | maintenance, build, dépendances |
-| `docs` | documentation |
-| `ci` | GitHub Actions |
+| `chore`    | maintenance, build, dépendances             |
+| `docs`     | documentation                               |
+| `ci`       | GitHub Actions                              |
 
 ```sh
 git add <fichiers>          # éviter "git add ." : vérifier ce qu'on ajoute
