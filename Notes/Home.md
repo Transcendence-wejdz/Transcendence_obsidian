@@ -14,6 +14,14 @@ Point d'entrée du vault. Ce vault vit dans le sous-module `Transcendence_obsidi
 - [[16-11-2026 Réunion]] : réunion du 16 novembre (ordre du jour et compte rendu)
 
 
+## Guides
+
+- [[Aide]] : point d'entrée en cas de difficulté avec GitHub, git ou Obsidian
+- [[Guide des issues GitHub]] : prendre une tâche, créer une issue, suivre le Project
+- [[Relire une PR]] : relire et tester une PR, traiter les retours sur la sienne
+- [[Obsidian au quotidien]] : rédiger, ranger, lier et publier une note
+- Maquette de la page d'accueil : `Notes/Web/Maquette accueil.html`, à ouvrir dans un navigateur
+
 ## Références
 
 - <a href="#vault://../CLAUDE.md" class="LinkRelativeTo">CLAUDE.md</a> : instructions projet pour Claude Code (archi, conventions, workflow)

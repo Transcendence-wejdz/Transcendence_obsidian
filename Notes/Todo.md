@@ -22,7 +22,7 @@ kanban-plugin: board
 - [ ] **Secrets hors du repo** : `.env` généré / injecté par la CI #infra #ci
 - [ ] **Typer `game/+page.svelte`** : 24 erreurs `svelte-check` (JS sans types) #web
 - [ ] **Licence Unity dans les secrets GitHub** : pour que Unity Build Check compile vraiment #ci
-- [ ] **Protections de branches** : `main` et `develop` : PR obligatoire, CI verte, 1 review #ci
+- [ ] **Protections de branches** : `main` et `develop` : PR obligatoire, CI verte, 2 reviews #ci
 - [ ] **Réécrire les notes Web du vault** : `Server`/`Frontend` décrivent encore l'ancien `server.js` #vault
 - [ ] **Finaliser les modules du README** : liste + points, à valider contre le sujet #docs
 - [ ] **Contributions individuelles du README** : jureix-c, dabuchhe, willda-s #docs
