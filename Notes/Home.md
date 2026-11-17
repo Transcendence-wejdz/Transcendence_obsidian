@@ -9,7 +9,7 @@ Point d'entrée du vault. Ce vault vit dans le sous-module `Transcendence_obsidi
 
 - [[Game Overview]] : jeu Unity (`UnityProject/`)
 - [[Web Overview]] : webapp (`web/`)
-- [[Todo]] : liste de tâches de l'équipe (tableau Kanban)
+- [[Todo]] : lien vers les tâches, suivies sur GitHub
 - [[Git Workflow]] : marche à suivre GitHub (branches, commits, PR, squash, release)
 - [[16-11-2026 Réunion]] : réunion du 16 novembre (ordre du jour et compte rendu)
 

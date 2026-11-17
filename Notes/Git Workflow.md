@@ -3,7 +3,7 @@ graph-size: 300
 ---
 #guide
 
-Lien retour : [[Home]]. Tâches de l'équipe : [[Todo]].
+Lien retour : [[Home]]. Tâches de l'équipe : [Project GitHub](https://github.com/orgs/Transcendence-wejdz/projects/1), voir [[Guide des issues GitHub]].
 
 Marche à suivre pour travailler sur le repo `ft_transcendence` (GitHub org **Transcendence-wejdz**). Le résumé officiel est dans la section *Project Management* du `README.md`.
 
@@ -37,18 +37,18 @@ feat/<scope>-<nom>   fix/<scope>-<nom>   docs/<nom>   (1 personne, courte durée
 ```
 
 - On ne pousse **jamais** directement sur `main` ni sur `develop`.
-- Une branche = une tâche du [[Todo]]. Courte : quelques jours, pas des semaines.
+- Une branche = une issue GitHub. Courte : quelques jours, pas des semaines.
 - Scopes : `web`, `api`, `db`, `game`, `net`, `infra`, `ci`, `vault`, `docs`.
-- Exemples : `feat/web-oauth`, `feat/game-2v2`, `fix/net-host-join-race`, `docs/readme-modules`.
+- Exemples : `feat/web-basic-chat`, `feat/game-2v2`, `fix/net-host-join-race`, `docs/readme-modules`.
 
 ## 1. Commencer une tâche
 
 ```sh
 git fetch origin
-git switch -c feat/web-oauth origin/develop
+git switch -c feat/web-basic-chat origin/develop
 ```
 
-Déplace la carte dans **En cours** du [[Todo]] et mets ton login dessus.
+Assigne-toi l'issue et passe sa carte en **En cours** dans le Project (voir [[Guide des issues GitHub#6.2 S'assigner la tâche]]).
 
 ## 2. Commiter
 
@@ -65,7 +65,7 @@ Format **Conventional Commits** : `type(scope): résumé court en anglais`
 
 ```sh
 git add <fichiers>          # éviter "git add ." : vérifier ce qu'on ajoute
-git commit -m "feat(web): add OAuth login with 42"
+git commit -m "feat(web): add the basic chat"
 ```
 
 - Un commit = une intention (une feature, un fix). Plusieurs petits commits valent mieux qu'un énorme.
@@ -88,20 +88,20 @@ git push --force-with-lease      # seulement sur TA branche de feature
 ## 4. Ouvrir la Pull Request
 
 ```sh
-git push -u origin feat/web-oauth
+git push -u origin feat/web-basic-chat
 gh pr create --base develop      # ou bouton "Compare & pull request" sur GitHub
 ```
 
 - **Base = `develop`** (jamais `main`).
-- **Titre au format Conventional Commit** : il deviendra le commit sur `develop` après le squash. Ex. `feat(web): add OAuth login with 42`.
+- **Titre au format Conventional Commit** : il deviendra le commit sur `develop` après le squash. Ex. `feat(web): add the basic chat`.
 - Remplir le template (quoi / pourquoi, comment tester, checklist).
 - Si le code touche un module, mettre à jour sa note dans ce vault (voir § Vault).
 
 ## 5. Review et merge
 
 1. La CI doit être verte (Web CI + Unity Build Check).
-2. Au moins un mate relit et approuve.
-3. Merge avec **Squash and merge** : tous les commits de la branche deviennent un seul commit propre sur `develop`, ex. `feat(web): add OAuth login with 42 (#24)`.
+2. Deux membres relisent et approuvent (voir [[Relire une PR]]).
+3. Merge avec **Squash and merge** : tous les commits de la branche deviennent un seul commit propre sur `develop`, ex. `feat(web): add the basic chat (#24)`.
    - Exception : **Create a merge commit** quand la PR a plusieurs auteurs ou des commits qu'on veut garder séparés.
 4. Cliquer **Delete branch** sur GitHub après le merge.
 
@@ -110,10 +110,10 @@ Puis en local :
 ```sh
 git switch develop
 git pull
-git branch -D feat/web-oauth     # -D car après un squash git ne voit pas la branche comme mergée
+git branch -D feat/web-basic-chat     # -D car après un squash git ne voit pas la branche comme mergée
 ```
 
-Déplace la carte dans **Fait** du [[Todo]].
+Ferme l'issue liée : sa carte passe dans **Terminé** (voir [[Guide des issues GitHub#6.6 Clôturer]]).
 
 ## 6. Release vers main
 
