@@ -9,7 +9,7 @@ fichiers:
 
 Lien retour : [[Web Overview]]
 
-Le site est une app **SvelteKit** (Svelte 5, TypeScript, `adapter-node`) dans `web/backend/sveltekit/`. Elle sert à la fois les pages et l'API `/api/…`. État au 17/11/2026.
+Le site est une app **SvelteKit** (Svelte 5, TypeScript, `adapter-node`) dans `web/backend/sveltekit/`. Elle sert à la fois les pages et l'API `/api/…`. État au 19/11/2026.
 
 ## Stack
 
@@ -18,9 +18,9 @@ Le site est une app **SvelteKit** (Svelte 5, TypeScript, `adapter-node`) dans `w
 | Framework | SvelteKit 2, Svelte 5 (runes) |
 | Composants interactifs (menus, listes, fenêtres) | Bits UI |
 | Toasts | svelte-sonner |
-| Traductions | Paraglide (en, fr, es), en cours |
+| Traductions | Paraglide (en, fr, es) |
 | Polices | `@fontsource` (Pirata One, Pixelify Sans, Inter), servies par le site |
-| Maquette de référence | V2, en HTML statique (hors repo) |
+| Maquette de référence | V3, en HTML statique (hors repo). Accueil et how-to-play dans `Notes/Web/` |
 
 ## Arborescence
 
@@ -41,7 +41,9 @@ Le site est une app **SvelteKit** (Svelte 5, TypeScript, `adapter-node`) dans `w
 | Page | État |
 |---|---|
 | `+error.svelte`, `/about`, `/privacy`, `/terms` | ✅ Faites d'après la maquette. `/about` : CTA et équipe à finaliser |
-| `/`, `/login`, `/register` | Anciennes versions, à refaire avec les composants |
+| `/` | Refaite d'après la maquette V3, traduite (branche `feat/web-home-page`, PR à ouvrir) |
+| `/how-to-play` | Maquette faite (`Notes/Web/Maquette how-to-play.html`), page à coder |
+| `/login`, `/register` | Anciennes versions, à refaire avec les composants |
 | `/settings` | Ancienne version. Prévue en 3 sections : Profil, Compte, Préférences |
 | `/game` | ✅ Charge le build Unity ; la Topbar n'apparaît qu'au survol |
 | `/friends-list` | Faite par A et erbuffet |
@@ -58,11 +60,12 @@ Le site est une app **SvelteKit** (Svelte 5, TypeScript, `adapter-node`) dans `w
 
 ## Traductions (i18n)
 
-Branche `feat/web-i18n`, pas encore fusionnée.
+Fusionnée dans `develop` (PR #119).
 
 - Les textes sont dans `messages/en.json`, `fr.json`, `es.json`. Dans un composant : `{m.nav_play()}`.
 - La langue vient du cookie `PARAGLIDE_LOCALE`, sinon de la langue du navigateur, sinon l'anglais. Pas de langue dans l'URL.
-- Traduits : Topbar, menu du compte, Footer. Le reste des pages est encore en anglais en dur.
+- Traduits : Topbar, menu du compte, Footer et l'accueil. Le reste des pages est encore en anglais en dur.
+- Noms des classes partagés : `class_warrior` … `class_pawn` (en français, le Pawn devient « Péon »).
 - Pour ajouter un texte traduit : voir [[Ajouter une clé i18n]].
 
 ## Conventions
