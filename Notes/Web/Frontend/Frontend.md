@@ -20,7 +20,7 @@ Le site est une app **SvelteKit** (Svelte 5, TypeScript, `adapter-node`) dans `w
 | Toasts | svelte-sonner |
 | Traductions | Paraglide (en, fr, es) |
 | Polices | `@fontsource` (Pirata One, Pixelify Sans, Inter), servies par le site |
-| Maquette de référence | V3, en HTML statique (hors repo). Accueil et how-to-play dans `Notes/Web/` |
+| Maquette de référence | V3, en HTML statique (hors repo) |
 
 ## Arborescence
 
@@ -42,7 +42,7 @@ Le site est une app **SvelteKit** (Svelte 5, TypeScript, `adapter-node`) dans `w
 |---|---|
 | `+error.svelte`, `/about`, `/privacy`, `/terms` | ✅ Faites d'après la maquette. `/about` : CTA et équipe à finaliser |
 | `/` | Refaite d'après la maquette V3, traduite (branche `feat/web-home-page`, PR à ouvrir) |
-| `/how-to-play` | Maquette faite (`Notes/Web/Maquette how-to-play.html`), page à coder |
+| `/how-to-play` | Maquette faite, page à coder |
 | `/login`, `/register` | Anciennes versions, à refaire avec les composants |
 | `/settings` | Ancienne version. Prévue en 3 sections : Profil, Compte, Préférences |
 | `/game` | ✅ Charge le build Unity ; la Topbar n'apparaît qu'au survol |

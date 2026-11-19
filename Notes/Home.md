@@ -20,7 +20,6 @@ Point d'entrée du vault. Ce vault vit dans le sous-module `Transcendence_obsidi
 - [[Guide des issues GitHub]] : prendre une tâche, créer une issue, suivre le Project
 - [[Relire une PR]] : relire et tester une PR, traiter les retours sur la sienne
 - [[Obsidian au quotidien]] : rédiger, ranger, lier et publier une note
-- Maquettes, à ouvrir dans un navigateur : page d'accueil `Notes/Web/Maquette accueil.html`, page how-to-play `Notes/Web/Maquette how-to-play.html`
 
 ## Références
 
